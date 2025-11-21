@@ -1,0 +1,3 @@
+{
+  "extends": ["github>akashic-games/renovate-config:groupAll"]
+}

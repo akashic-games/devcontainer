@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "name": "@akashic-games/devcontainer",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "format": "prettier -w .",
+    "test": "prettier -c ."
+  },
+  "keywords": [],
+  "author": "DWANGO Co., Ltd.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akashic-games/devcontainer.git"
+  },
+  "packageManager": "pnpm@10.22.0",
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "prettier-plugin-sh": "^0.18.0"
+  }
+}

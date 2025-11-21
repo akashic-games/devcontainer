@@ -1,0 +1,13 @@
+trailingComma: es5
+semi: true
+singleQuote: false
+arrowParens: avoid
+printWidth: 140
+
+plugins:
+  - prettier-plugin-sh
+
+overrides:
+  - files: "Dockerfile*"
+    options:
+      parser: sh

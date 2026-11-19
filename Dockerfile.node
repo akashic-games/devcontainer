@@ -1,5 +1,8 @@
 FROM node:24.22.3-slim@sha256:dc26ae92c9fb15cf6b1d63e20f0944b2efe0f115b20e00be48fb23fceb061c54
 
+# Update npm from the bundled (v11.19.1) to avoid known vulnerabilities
+RUN npm install --min-release-age=7 --ignore-scripts -g npm@11.21.2
+
 # Install basic development tools
 RUN apt-get update && apt-get install -y --no-install-recommends \
   git \
@@ -56,4 +59,4 @@ ENV PATH=$PATH:/usr/local/share/npm-global/bin
 ENV SHELL=/bin/zsh
 
 # Install Claude
-RUN npm install --min-release-age=7 -g @anthropic-ai/claude-code
+RUN npm install --min-release-age=7 --allow-scripts="@anthropic-ai/claude-code" -g @anthropic-ai/claude-code
